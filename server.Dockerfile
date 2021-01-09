@@ -10,4 +10,3 @@ RUN apk update && apk add --no-cache --virtual .build-deps build-base linux-head
     chmod +x server.py
 
 ENTRYPOINT ["./server.py"]
-CMD ["-h"]

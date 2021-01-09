@@ -11,3 +11,4 @@ RUN apk update && apk add --no-cache --virtual .build-deps build-base linux-head
     chmod +x client.py
 
 ENTRYPOINT ["./client.py"]
+CMD ["-h"]
