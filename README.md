@@ -1,6 +1,6 @@
 The repository contains a minimal example for the purpose of the Stack Overflow question. Example
 consist of a simple python gRPC server and client application that are ran inside of docker
-containers. Provided docker-compose file launches the server and configured HAProxy instance.
+containers. Provided `docker-compose` file launches the server and configured HAProxy instance.
 
 ------------
 
@@ -10,7 +10,8 @@ containers. Provided docker-compose file launches the server and configured HAPr
 $ docker-compose up
 ```
 
-_NOTE_: This call will invoke docker container build. During the build, grpc-core is being compiled and this may take a while.
+_NOTE_: This call will invoke docker container build. During the build, grpc-core is being compiled
+ and this may take a while.
 
 ## Building the client
 
