@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package service;
+import "google/protobuf/empty.proto";
+
+service Service {
+
+    rpc UnaryUnary(google.protobuf.Empty) returns (google.protobuf.Empty);
+    rpc StreamUnary(stream google.protobuf.Empty) returns (google.protobuf.Empty);
+    rpc UnaryStream(google.protobuf.Empty) returns (stream google.protobuf.Empty);
+    rpc StreamStream(stream google.protobuf.Empty) returns (stream google.protobuf.Empty);
+
+}

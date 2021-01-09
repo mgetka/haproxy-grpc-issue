@@ -1,0 +1,15 @@
+version: "3"
+services:
+  server:
+    build:
+      context: .
+      dockerfile: server.Dockerfile
+  proxy:
+    image: haproxy:2.3.2
+    depends_on:
+      - server
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+networks:
+  default:
+    name: haproxy_grpc_issue
