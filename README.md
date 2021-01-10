@@ -36,7 +36,7 @@ optional arguments:
 ### Direct call
 
 ```
-$ docker run -it --rm --network haproxy_grpc_issue client --host server stream-stream
+$ docker run --network haproxy_grpc_issue client --host server stream-stream
 Received gRPC error:
 Status:		StatusCode.PERMISSION_DENIED
 Details:	Details sent by the server
@@ -45,7 +45,7 @@ Details:	Details sent by the server
 ### Call through the proxy
 
 ```
-$ docker run -it --rm --network haproxy_grpc_issue client --host proxy stream-stream
+$ docker run --network haproxy_grpc_issue client --host proxy stream-stream
 Received gRPC error:
 Status:		StatusCode.CANCELLED
 Details:	Received RST_STREAM with error code 8
