@@ -6,7 +6,7 @@ RUN apk update && apk add --no-cache --virtual .build-deps build-base linux-head
     apk add libstdc++                                                                           && \
     pip install -r requirements.txt                                                             && \
     apk --purge del .build-deps                                                                 && \
-    rm -rf /var/lib/apt/lists/*                                                                 && \
+    rm -rf /var/cache/apk/*                                                                     && \
     python -m grpc_tools.protoc --proto_path=. --python_out=. --grpc_python_out=. service.proto && \
     chmod +x server.py
 
